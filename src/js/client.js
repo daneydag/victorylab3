@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {VictoryBar, VictoryAxis,VictoryTheme, VictoryStack} from 'victory';
+import {VictoryBar, VictoryChart, VictoryAxis,VictoryTheme, VictoryStack} from 'victory';
 
 const data2012 = [
     {quarter: 1, earnings: 13000},
@@ -30,7 +30,8 @@ const data2012 = [
     {quarter: 4, earnings: 12000}
   ];
   
-  class App extends React.Component {
+
+  class Main extends React.Component {
     render() {
       return (
         <VictoryChart
@@ -70,8 +71,10 @@ const data2012 = [
             />
           </VictoryStack>
         </VictoryChart>
+   
       )
     }
   }
   
-  ReactDOM.render(<App/>, mountNode);
+  const app = document.getElementById('app');
+ReactDOM.render(<Main />, app);
